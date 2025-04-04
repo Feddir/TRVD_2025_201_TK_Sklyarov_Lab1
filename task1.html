@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Демонстрація HTML5 тегів</title>
+</head>
+<body>
+
+<header>
+  <h1>Демонстрація нових тегів HTML5</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#article">Article</a></li>
+    <li><a href="#aside">Aside</a></li>
+    <li><a href="#audio">Audio</a></li>
+    <li><a href="#video">Video</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="article">
+    <article>
+      <header>
+        <h2>Про HTML5</h2>
+      </header>
+      <p>HTML5 — це остання версія мови розмітки HTML.</p>
+      <footer>Автор: <mark>Скляров Федір</mark></footer>
+    </article>
+  </section>
+
+  <aside id="aside">
+    <p>Aside — бічна панель із додатковою інформацією.</p>
+  </aside>
+
+  <section id="audio">
+    <h2>Аудіо</h2>
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+
+  <section id="video">
+    <h2>Відео</h2>
+    <iframe width="300" height="200" 
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+      frameborder="0" 
+      allowfullscreen 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </section>
+
+  <section>
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "red";
+      ctx.fillRect(20, 20, 150, 50);
+    </script>
+  </section>
+
+  <section>
+    <h2>Datalist</h2>
+    <input list="browsers" name="browser" placeholder="Оберіть браузер">
+    <datalist id="browsers">
+      <option value="Chrome">
+      <option value="Firefox">
+      <option value="Safari">
+      <option value="Edge">
+    </datalist>
+  </section>
+
+  <section>
+    <h2>Details і Summary</h2>
+    <details>
+      <summary>Детальніше</summary>
+      <p>Це прихований контент, який можна розгорнути.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Dialog</h2>
+    <dialog open>
+      Це діалогове вікно.
+    </dialog>
+  </section>
+
+  <section>
+    <h2>Embed</h2>
+    <embed src="file:///C:/Users/User/Downloads/raf,360x360,075,t,fafafa_ca443f4786%20(1).pdf" type="application/pdf" width="300" height="200">
+  </section>
+
+  <section>
+    <h2>Figure і Figcaption</h2>
+    <figure>
+      <img src="https://i.ytimg.com/vi/vH8kYVahdrU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDupXZrUT00Q1ru06NV2vi3rMfp0w" alt="Приклад зображення" width="200">
+      <figcaption>car</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Meter</h2>
+    <label for="fuel">Рівень пального:</label>
+    <meter id="fuel" value="0.6">60%</meter>
+  </section>
+
+  <section>
+    <h2>Output</h2>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+      <input type="range" id="a" value="50"> +
+      <input type="number" id="b" value="50"> =
+      <output name="result">100</output>
+    </form>
+  </section>
+
+  <section>
+    <h2>Picture</h2>
+    <picture>
+      <source media="(min-width: 800px)" srcset="large.jpg">
+      <source media="(min-width: 400px)" srcset="medium.jpg">
+      <img src="https://i.pinimg.com/736x/56/13/95/561395ef73dc465bb7fe0c5c5a00d8d2.jpg" alt="Адаптивне зображення" width="100%">
+    </picture>
+  </section>
+
+  <section>
+    <h2>Progress</h2>
+    <progress value="70" max="100"></progress>
+  </section>
+
+  <section>
+    <h2>Template</h2>
+    <template id="my-template">
+      <p>Шаблон</p>
+    </template>
+  </section>
+
+  <section>
+    <h2>Time</h2>
+    <p>Подія почнеться <time datetime="2025-05-01T20:00">4 квітня о 14:00</time>.</p>
+  </section>
+
+  <section>
+    <h2>BDI</h2>
+    <p>Користувач: <bdi>текст</bdi></p>
+  </section>
+
+  <section>
+    <h2>Menuitem (демонстрація)</h2>
+    <menu type="context">
+      <menuitem label="Оновити" onclick="location.reload()"></menuitem>
+    </menu>
+  </section>
+
+  <section>
+    <h2>WBR</h2>
+    <p>віарпоірмпор<wbr>іупанікрмп</p>
+  </section>
+</main>
+
+<footer>
+  <p>Демонстраційний HTML5 документ</p>
+</footer>
+
+</body>
+</html>
